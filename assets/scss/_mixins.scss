@@ -3,31 +3,52 @@
     @content;
   }
 }
+
 @mixin for-tablet-portrait-up {
   @media (min-width: 600px) {
     @content;
   }
 }
+
 @mixin for-tablet-landscape-up {
   @media (min-width: 900px) {
     @content;
   }
 }
+
 @mixin max-for-tablet-landscape-up {
   @media (max-width: 900px) {
     @content;
   }
 }
+
 @mixin for-desktop-up {
-  @media (min-width: 1200px) {
+  @media (min-width: 1120px) {
     @content;
   }
 }
+
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) {
     @content;
   }
 }
+
 @mixin transicao {
   transition: background-color 2s ease-out;
+}
+
+@mixin buttonDefault($background, $color) {
+  background-color: $background;
+  color: $color;
+  border: none;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 16px 36px;
+  width: calc(100% - 30%);
+  &:hover {
+    background-color: $secondary;
+  }
 }
